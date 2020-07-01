@@ -146,9 +146,9 @@ public class DvObjectServiceBean implements java.io.Serializable {
             return dvObject;
         }
         dvObjectToModify.setPermissionIndexTime(new Timestamp(new Date().getTime()));
-        DvObject savedDvObject = em.merge(dvObjectToModify);
+        //DvObject savedDvObject = em.merge(dvObjectToModify);
         logger.log(Level.FINE, "Updated permission index time for DvObject id {0}", dvObjectId);
-        return savedDvObject;
+        return dvObject;//savedDvObject;
     }
 
     @TransactionAttribute(REQUIRES_NEW)
